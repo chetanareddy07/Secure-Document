@@ -22,16 +22,16 @@ export const AccessRestricted: React.FC = () => {
           </span>
           <h2 className="text-xl font-extrabold text-white mt-2">Access Control Denied</h2>
           <p className="text-xs text-slate-400 mt-2 leading-relaxed">
-            Your current logged in ID <code className="text-cyan-300 font-bold">{user?.id}</code> ({roleCfg?.title}) does not hold clearance to access this specialized workstation.
+            Your current logged in ID <code className="text-[#118AB2] font-bold">{user?.id}</code> ({roleCfg?.title}) does not hold clearance to access this specialized workstation.
           </p>
         </div>
 
-        <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 text-left text-xs space-y-1.5 font-mono">
+        <div className="p-3.5 rounded-xl bg-[#073B4C] border border-slate-800 text-left text-xs space-y-1.5 font-mono">
           <div className="flex justify-between text-slate-400">
             <span>Attempted Resource:</span> <span className="text-slate-200">Restricted Workstation</span>
           </div>
           <div className="flex justify-between text-slate-400">
-            <span>Required Clearance:</span> <span className="text-amber-400">Target Role ID</span>
+            <span>Required Clearance:</span> <span className="text-[#7CD5C7]">Target Role ID</span>
           </div>
           <div className="flex justify-between text-slate-400">
             <span>Audit Status:</span> <span className="text-red-400 font-bold">LOGGED & REPORTED</span>
@@ -41,9 +41,9 @@ export const AccessRestricted: React.FC = () => {
         <div className="pt-2">
           <button
             onClick={logout}
-            className="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition-all cursor-pointer flex items-center justify-center gap-2"
+            className="w-full py-2.5 rounded-xl bg-[#118AB2] hover:bg-[#073B4C] text-white text-xs font-semibold transition-all cursor-pointer flex items-center justify-center gap-2"
           >
-            <Lock className="w-3.5 h-3.5 text-cyan-400" /> Logout Session to Switch Officer ID
+            <Lock className="w-3.5 h-3.5 text-[#7CD5C7]" /> Logout Session to Switch Officer ID
           </button>
         </div>
 

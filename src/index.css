@@ -1,12 +1,18 @@
 @import "tailwindcss";
 
+:root {
+  --color-primary: #118AB2;
+  --color-secondary: #7CD5C7;
+  --color-bg: #F2F2ED;
+  --color-dark: #073B4C;
+}
+
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-900 antialiased min-h-screen selection:bg-blue-500/20 selection:text-blue-900;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #f8fafc;
-    background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
-    background-size: 24px 24px;
+    background-color: #F2F2ED;
+    color: #073B4C;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
   }
 }
 
@@ -17,30 +23,66 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #F2F2ED;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 3px;
+  background: #118AB2;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #073B4C;
 }
 
-/* White Panel Styling */
-.white-panel {
+/* Theme Panel Classes */
+.theme-panel {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(17, 138, 178, 0.2);
+  box-shadow: 0 4px 12px -2px rgba(17, 138, 178, 0.08);
 }
 
-.white-panel-hover {
-  transition: all 0.2s ease-in-out;
+.theme-panel-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.white-panel-hover:hover {
-  border-color: #cbd5e1;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+.theme-panel-hover:hover {
+  border-color: #118AB2;
+  box-shadow: 0 10px 20px -4px rgba(17, 138, 178, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Theme Glow Classes */
+.border-glow-primary {
+  border-color: #118AB2;
+  box-shadow: 0 0 12px rgba(17, 138, 178, 0.25);
+}
+
+.border-glow-secondary {
+  border-color: #7CD5C7;
+  box-shadow: 0 0 12px rgba(124, 213, 199, 0.3);
+}
+
+.bg-theme-main {
+  background-color: #F2F2ED;
+}
+
+.bg-theme-primary {
+  background-color: #118AB2;
+}
+
+.bg-theme-secondary {
+  background-color: #7CD5C7;
+}
+
+.text-theme-primary {
+  color: #118AB2;
+}
+
+.text-theme-secondary {
+  color: #7CD5C7;
+}
+
+.text-theme-dark {
+  color: #073B4C;
 }
