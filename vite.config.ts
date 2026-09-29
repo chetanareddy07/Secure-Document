@@ -7,6 +7,9 @@ export default defineConfig({
   // Relative asset URLs work both locally and on GitHub Pages project sites.
   base: './',
   plugins: [react(), tailwindcss()],
+  preview: {
+    allowedHosts: true,
+  },
   server: {
     proxy: {
       '/api': {
